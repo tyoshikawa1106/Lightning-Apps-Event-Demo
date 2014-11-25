@@ -1,0 +1,17 @@
+<aura:component>
+    <aura:registerEvent name="selectLimitSize" type="BarnSwallow:LightningEventDemoChangeListLimit" />
+    <div class="form-group padding">
+        <div class="radio-inline">
+            <input type="radio" value="1" name="selectListLimit" id="1" onchange="{!c.change}"></input>
+            <label for="1">1件</label>
+        </div>
+        <div class="radio-inline">
+            <input type="radio" value="10" name="selectListLimit" id="10" onchange="{!c.change}"></input>
+            <label for="10">10件</label>
+        </div>
+        <div class="radio-inline">
+            <input type="radio" value="100" name="selectListLimit" id="100" onchange="{!c.change}"></input>
+            <label for="100">100件</label>
+        </div>
+    </div>
+</aura:component>

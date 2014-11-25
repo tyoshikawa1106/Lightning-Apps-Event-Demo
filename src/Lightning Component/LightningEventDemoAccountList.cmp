@@ -1,0 +1,25 @@
+<aura:component controller="BarnSwallow.LightningEventDemoController">
+    <aura:attribute name="accounts" type="Account[]" />
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:handler event="BarnSwallow:LightningEventDemoChangeListLimit" action="{!c.handleGetAccounts}"/>
+    <table class="table table-striped table-bordered table-condensed table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Account Number</th>
+                <th>Phone</th>
+                <th>NumberOfEmployees</th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.accounts}" var="a">
+                <tr>
+                    <td>{!a.Name}</td>
+                    <td>{!a.AccountNumber}</td>
+                    <td>{!a.Phone}</td>
+                    <td>{!a.NumberOfEmployees}</td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>
